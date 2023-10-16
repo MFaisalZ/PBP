@@ -1,32 +1,29 @@
-/*
-Nama 	: Muhammad Faisal Zulmaulidin
-NIM 	: 20220040171
-Kelas	: TI 22 M
-Tugas 	: Struktur Data - sesi 3 array object 
-/variabel restaurant
-*/
-const restaurant = {
-	name: "Mie SP",
-	city: "Sukabumi",
-	favorietDrink: "Es Teh Manis",
-	favvoriteFood: "Mie Goreng SP Lev 5",
-	isVegan: true // atau false tergantung
-};
+// Pendapatan harian dari penjualan barang
+const pendapatan = 530000; // Ganti dengan jumlah pendapatan yang sesuai
 
-const restoranSmi = [
-	{
-		name: "Mie Gacoan",
-		city: "Bogor",
-		favorietDrink: "Es Teh Manis",
-		favvoriteFood: "Mie Gacoan Level 5",
-		isVegan: true // atau false tergantung
-	},
-	{
-		name: "Kabumi",
-		city: "Sukabumi",
-		favorietDrink: "Coffe Arabica",
-		favvoriteFood: "Nasi Goreng Seafood",
-		isVegan: true // atau false tergantung
-	}
-];
+// Inisialisasi variabel uangJasa dan persentaseKomisi
+let uangJasa;
+let persentaseKomisi;
 
+if (pendapatan <= 200000) {
+  uangJasa = 10000;
+  persentaseKomisi = 0.1;
+} else if (pendapatan <= 500000) {
+  uangJasa = 20000;
+  persentaseKomisi = 0.15;
+} else {
+  uangJasa = 30000;
+  persentaseKomisi = 0.2;
+}
+
+// Menghitung komisi
+const komisi = pendapatan * persentaseKomisi;
+
+// Menampilkan hasil
+console.log("Pendapatan Harian : Rp. " + pendapatan);
+console.log("Uang Jasa : Rp. " + uangJasa);
+console.log("Komisi : Rp. " + komisi);
+
+// Total bayaran yang diterima
+const totalBayaran = uangJasa + komisi;
+console.log("Total Bayaran : Rp. " + totalBayaran);
